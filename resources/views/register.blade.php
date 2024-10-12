@@ -50,7 +50,7 @@
                                         <h4 class="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
                                     </div>
 
-                                    <form action="{{ url('register') }}" method="POST" enctype="multipart/form-data">
+                                    <form action="{{ route('user.register') }}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         <p>Please create your account</p>
 

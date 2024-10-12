@@ -51,7 +51,7 @@
                                         <h4 class="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
                                     </div>
 
-                                    <form action="{{ url('login') }}" method="POST">
+                                    <form action="{{ route('login') }}" method="POST">
                                         @csrf
                                         <p>Please login to your account</p>
 

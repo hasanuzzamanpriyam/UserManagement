@@ -12,11 +12,11 @@
         @include('messages')
         <div class="mb-2 row">
             <div class="col-6">
-                <a href="{{ url('home') }}" class="btn btn-success">Home</a>
-                <a href="{{ url('contact/create') }}" class="btn btn-primary">Add Contact</a>
+                <a href="{{ route('user.home') }}" class="btn btn-success">Home</a>
+                <a href="{{ route('contact.create') }}" class="btn btn-primary">Add Contact</a>
             </div>
             <div class="col-6">
-                <form action="{{ url('contact/list') }}" class="row">
+                <form action="{{ route('contact.list') }}" class="row">
                     @csrf
                     <div class="col-8">
                         <input type="text" name="search" class="form-control" placeholder="Search" value="{{ $search }}">
@@ -43,9 +43,9 @@
                     <td>{{ $contact->First_name. ' '.$contact->Last_name }}</td>
                     <td>{{ $contact->Number }}</td>
                     <td>
-                        <a href="{{ url('contact/show/'.$contact->id) }}') }}" class="btn btn-success">Show UserID</a>
-                        <a href="{{ url('contact/edit/'.$contact->id) }}') }}" class="btn btn-primary">Edit</a>
-                        <a href="{{ url('contact/destroy/'.$contact->id) }}') }}" class="btn btn-danger">Delete</a>
+                        <a href="{{ route('contact.show', $contact->id) }}') }}" class="btn btn-success">Show UserID</a>
+                        <a href="{{ route('contact.edit',$contact->id) }}') }}" class="btn btn-primary">Edit</a>
+                        <a href="{{ route('contact.destroy',$contact->id) }}') }}" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
                 @endforeach

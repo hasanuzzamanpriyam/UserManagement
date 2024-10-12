@@ -45,7 +45,7 @@
                                 <div class="card-body">
 
                                     <h1>Please create your Contact</h1>
-                                    <form action="{{ url('contact/store') }}" method="POST" enctype="multipart/form-data">
+                                    <form action="{{ route('contact.store') }}" method="POST" enctype="multipart/form-data">
                                         @csrf
 
                                         <div data-mdb-input-init class="form-outline mb-4">

@@ -45,7 +45,7 @@
                                 <div class="card-body">
 
                                     <h1>Update Contact</h1>
-                                    <form action="{{ url('contact/update/'.$contact->id) }}') }}" method="POST" enctype="multipart/form-data">
+                                    <form action="{{ route('contact.update',$contact->id) }}') }}" method="POST" enctype="multipart/form-data">
                                         @csrf
 
                                         <div data-mdb-input-init class="form-outline mb-4">
