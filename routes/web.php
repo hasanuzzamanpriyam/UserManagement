@@ -20,7 +20,6 @@ Route::post('login', [LoginController::class, 'login'])->name('login');
 Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('home', [HomeController::class, 'index'])->name('user.home');
 
-
 Route::prefix('contact/')->group(function () {
    Route::get('list', [ContactController::class, 'index'])->name('contact.list');
    Route::get( 'create', [ContactController::class,'create'])->name('contact.create');
